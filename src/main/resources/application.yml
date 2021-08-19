@@ -1,0 +1,9 @@
+spring:
+  kafka:
+    producer:
+      batch-size: 1
+      compression-type: snappy
+
+server:
+  port: 8081
+        
