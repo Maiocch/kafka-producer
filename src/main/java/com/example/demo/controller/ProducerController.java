@@ -18,8 +18,8 @@ public class ProducerController {
 	@GetMapping("/publish/{msg}")
 	public String createMessage(@PathVariable("msg") String mex) {
 
-		ObjectMapper mapper = Jackson2ObjectMapperBuilder.xml().build();
-		ObjectMapper jsonMapper = Jackson2ObjectMapperBuilder.json().build();
+//		ObjectMapper mapper = Jackson2ObjectMapperBuilder.xml().build();
+//		ObjectMapper jsonMapper = Jackson2ObjectMapperBuilder.json().build();
 
 
 

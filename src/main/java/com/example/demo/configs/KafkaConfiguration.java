@@ -43,7 +43,11 @@ public class KafkaConfiguration {
 		Map<String, Object> props = new HashMap<String, Object>(kafkaProperties.buildProducerProperties());
 		props.put(ProducerConfig.KEY_SERIALIZER_CLASS_CONFIG, StringSerializer.class);
 		props.put(ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG, JsonSerializer.class);
-		
+
+		props.put(ProducerConfig.LINGER_MS_CONFIG, 3000);
+		props.put(ProducerConfig.BATCH_SIZE_CONFIG, 20000);
+		props.put(ProducerConfig.COMPRESSION_TYPE_CONFIG, "snappy");
+
 		return props;
 	}
 	
